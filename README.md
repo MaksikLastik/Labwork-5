@@ -12,7 +12,7 @@
 Массив после сортировки:
 ##### ![alt-текст](https://github.com/MaksikLastik/Labwork-5/blob/main/images%20for%20README/Массив%20после%20сортировки.png)
 ## Программный код, реализующий систему
-1. ```php
+```php
 function getValue($id) {
     require("connection.php");
     $result = mysqli_query($connnect, $query = "SELECT * FROM sorting_table WHERE id = '$id'");
@@ -21,13 +21,13 @@ function getValue($id) {
     return $value;
 }
 ```
-2. ```php
+```php
 function setValue($id, $value) {
     require("connection.php");
     $result = mysqli_query($connnect, "UPDATE sorting_table SET value = '$value' WHERE id ='$id'");
 }
 ```
-3. ```php
+```php
 function bubble_sort() {
     require("connection.php");
     $result = mysqli_query($connnect, "SELECT DISTINCT * FROM sorting_table"); 
@@ -48,13 +48,13 @@ function bubble_sort() {
     }
 }
 ```
-4. ```php
+```php
 $connnect = mysqli_connect("l5.lab", "root", "", "lab5");
 if (!$connnect) {
     die("Database not found!");
 }
 ```
-5. ```php
+```php
 require_once "functions.php";
 bubble_sort();
 ```
